@@ -1,0 +1,28 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!-- 1.注解扫描 -->
+    <!-- SpringMVC 与 Spring都有自己的IOC容器，因此对于web层使用SpringMVC技术，那么就在SpringMVC配置文件中配置注解扫描 -->
+    <context:component-scan base-package="com.mcf.controller"></context:component-scan>
+
+    <!-- 2.mvc注解增强  主要就是为了Spring MVC来用的，提供Controller请求转发，json自动转换等功能 -->
+    <mvc:annotation-driven/>
+
+    <!-- 3.视图解析器：暂时不配置  我们使用的前后端分离架构，后端只用编写接口，返回JSON字符串，视图解析器目前没有用 -->
+
+    <!-- 4.静态资源放行 -->
+    <!-- 所有的静态资源放行 -->
+    <mvc:default-servlet-handler/>
+
+
+
+</beans>
