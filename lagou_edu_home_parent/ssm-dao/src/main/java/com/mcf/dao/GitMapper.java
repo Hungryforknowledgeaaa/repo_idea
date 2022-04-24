@@ -13,11 +13,11 @@ public interface GitMapper {
 
     List<User> selectAllUser();
 
-    void test01();
-    void test02();
-    void test03();
-    void test04();
-    void test05();
-    void test06();
-    void test07();
+    void test011();
+    void test021();
+    void test031();
+    void test041();
+    void test051();
+    void test061();
+    void test071();
 }
